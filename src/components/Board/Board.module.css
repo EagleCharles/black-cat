@@ -1,0 +1,162 @@
+.boardWrapper {
+    height: 550px;
+    width: 550px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.5);
+}
+
+.boardRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 530px;
+    height: calc(530px / 9);
+}
+
+.boardCellWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(530px / 10);
+    height: calc(530px / 10);
+}
+
+.boardCell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* background-color: #f08080; */
+    width: calc(510px / 10);
+    height: calc(510px / 10);
+    border: 1px inset rgb(126, 124, 124);
+    /* border-radius: 7px; */
+    cursor: pointer;
+}
+
+.boardPiece {
+    width: calc(510px / 10);
+    height: calc(510px / 10);
+    /* border-radius: 100%; */
+    border: 1px outset rgb(49, 48, 48);
+}
+
+.boardPieceBlock {
+    background-color: rgb(80, 8, 8);
+    border: 1px inset rgb(158, 89, 89);
+}
+
+.boardPieceCat {
+    background-color: black;
+    border: 1px inset rgb(37, 37, 241);
+    background-image: url(https://th.bing.com/th/id/R.6ccbb003afcb1c9b723631efe127fbe8?rik=nmvIVNZgJCqOmQ&pid=ImgRaw&r=0);
+    background-size: cover;
+    animation: swell 2s linear 0ms infinite forwards;
+}
+
+.boardPieceHide {
+    display: none;
+}
+
+.boardPieceCatTrapped {
+    background-color: black;
+    border: 1px inset rgb(37, 37, 241);
+    background-image: url(https://th.bing.com/th/id/R.6ccbb003afcb1c9b723631efe127fbe8?rik=nmvIVNZgJCqOmQ&pid=ImgRaw&r=0);
+    background-size: cover;
+    animation: rotate 2s linear 0ms infinite forwards;
+    border-radius: 100%;
+}
+
+@media (max-width: 700px) {
+    .boardWrapper {
+        height: 500px;
+        width: 500px;
+    }
+
+    .boardRow {
+        width: 480px;
+        height: calc(480px / 4);
+    }
+
+    .boardCellWrapper {
+        width: calc(480px / 5);
+        height: calc(480px / 5);
+    }
+
+    .boardCell {
+        width: calc(460px / 5);
+        height: calc(460px / 5);
+    }
+
+    .boardPiece {
+        width: calc(400px / 5);
+        height: calc(400px / 5);
+    }
+}
+
+/** 
+  Small (sm) devices (landscap phones, 576px and down)
+**/
+@media (max-width: 576px) {
+    .boardWrapper {
+        height: fit-content;
+        width: 80vw;
+    }
+    .boardRow {
+        width: 74vw;
+        height: calc(74vw / 5);
+    }
+
+    .boardCellWrapper {
+        width: calc(74vw / 5);
+        height: calc(74vw / 5);
+    }
+
+    .boardCell {
+        width: calc(72vw / 5);
+        height: calc(72vw / 5);
+    }
+
+    .boardPiece {
+        width: calc(60vw / 5);
+        height: calc(60vw / 5);
+    }
+}
+
+@keyframes swell {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.03);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    75% {
+      transform: scale(1.03);
+    }
+    100% {
+      transform: scale(1.01);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(120deg);
+      }
+      50% {
+        transform: rotate(240deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}
