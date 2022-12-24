@@ -1,6 +1,6 @@
 # Le Chat Noir
-Dapp entry for decentralized-umoja-3 bounty hack. 
-
+ 
+ 
 ### Description
 In this game, two players compete to see who would take the least number of moves to trap a cat.
 In each player's turn, they click on a cell to make the cat unable to step there. For each click, the cat moves in a random direction.
